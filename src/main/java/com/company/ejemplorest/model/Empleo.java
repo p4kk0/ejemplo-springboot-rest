@@ -6,13 +6,17 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.hateoas.ResourceSupport;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class Empleo extends ResourceSupport{
 
 	private Integer idEmpleo;
 	private String nombreEmpleo;
 	private String empresa;
 	private String sector;
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private Date fechaInicio;
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private Date fechaFin;
 
 	public Empleo() {
