@@ -9,7 +9,7 @@ public class PersonaMapper {
 
 	public com.company.ejemplorest.entity.Persona fromModel2Entity(Persona personaModel){
 		com.company.ejemplorest.entity.Persona persona = new com.company.ejemplorest.entity.Persona();
-		persona.setId(personaModel.getId());
+		persona.setIdPersona(personaModel.getIdPersona());
 		persona.setNombre(personaModel.getNombre());
 		persona.setApellidos(personaModel.getApellidos());
 		persona.setEdad(personaModel.getEdad());
@@ -19,7 +19,7 @@ public class PersonaMapper {
 	
 	public Persona  fromEntity2Model(com.company.ejemplorest.entity.Persona  personaEntity){
 		Persona persona = new Persona();
-		persona.setId(personaEntity.getId());
+		persona.setIdPersona(personaEntity.getIdPersona());
 		persona.setNombre(personaEntity.getNombre());
 		persona.setApellidos(personaEntity.getApellidos());
 		persona.setEdad(personaEntity.getEdad());

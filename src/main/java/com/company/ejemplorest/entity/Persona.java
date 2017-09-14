@@ -1,9 +1,13 @@
 package com.company.ejemplorest.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -12,8 +16,8 @@ public class Persona {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "ID")
-	private Integer id;
+	@Column(name = "ID_PERSONA")
+	private Integer idPersona;
 
 	@Column(name = "NOMBRE", nullable = false, length = 100)
 	private String nombre;
@@ -27,25 +31,34 @@ public class Persona {
 	@Column(name = "GAY")
 	private boolean gay;
 
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "persona")
+	private List<Empleo> empleos;
+
 	public Persona() {
 		super();
 	}
 
-	public Persona(Integer id, String nombre, String apellidos, int edad, boolean gay) {
+	public Persona(Integer idPersona) {
 		super();
-		this.id = id;
+		this.idPersona = idPersona;
+	}
+
+	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, boolean gay, List<Empleo> empleos) {
+		super();
+		this.idPersona = idPersona;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
 		this.gay = gay;
+		this.empleos = empleos;
 	}
 
-	public Integer getId() {
-		return id;
+	public Integer getIdPersona() {
+		return idPersona;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdPersona(Integer id) {
+		this.idPersona = id;
 	}
 
 	public String getNombre() {
@@ -79,4 +92,13 @@ public class Persona {
 	public void setGay(boolean gay) {
 		this.gay = gay;
 	}
+
+	public List<Empleo> getEmpleos() {
+		return empleos;
+	}
+
+	public void setEmpleos(List<Empleo> empleos) {
+		this.empleos = empleos;
+	}
+
 }

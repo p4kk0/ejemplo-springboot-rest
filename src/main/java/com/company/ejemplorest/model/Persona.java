@@ -1,11 +1,14 @@
 package com.company.ejemplorest.model;
 
+import java.util.List;
+
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.springframework.hateoas.ResourceSupport;
 
-public class Persona {
+public class Persona extends ResourceSupport{
 
-	private Integer id;
+	private Integer idPersona;
 	private String nombre;
 	private String apellidos;
 	private Integer edad;
@@ -15,21 +18,21 @@ public class Persona {
 		super();
 	}
 
-	public Persona(Integer id, String nombre, String apellidos, int edad, boolean gay) {
+	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, boolean gay, List<Empleo> empleos) {
 		super();
-		this.id = id;
+		this.idPersona = idPersona;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
 		this.gay = gay;
 	}
 
-	public Integer getId() {
-		return id;
+	public Integer getIdPersona() {
+		return idPersona;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdPersona(Integer idPersona) {
+		this.idPersona = idPersona;
 	}
 
 	public String getNombre() {
@@ -68,5 +71,5 @@ public class Persona {
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
 	}
-	
+
 }
