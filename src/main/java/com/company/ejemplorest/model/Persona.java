@@ -12,19 +12,17 @@ public class Persona extends ResourceSupport{
 	private String nombre;
 	private String apellidos;
 	private Integer edad;
-	private boolean gay;
 
 	public Persona() {
 		super();
 	}
 
-	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, boolean gay, List<Empleo> empleos) {
+	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, List<Empleo> empleos) {
 		super();
 		this.idPersona = idPersona;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-		this.gay = gay;
 	}
 
 	public Integer getIdPersona() {
@@ -57,14 +55,6 @@ public class Persona extends ResourceSupport{
 
 	public void setEdad(Integer edad) {
 		this.edad = edad;
-	}
-
-	public boolean isGay() {
-		return gay;
-	}
-
-	public void setGay(boolean gay) {
-		this.gay = gay;
 	}
 
 	@Override

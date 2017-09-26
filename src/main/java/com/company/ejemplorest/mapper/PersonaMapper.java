@@ -13,7 +13,6 @@ public class PersonaMapper {
 		persona.setNombre(personaModel.getNombre());
 		persona.setApellidos(personaModel.getApellidos());
 		persona.setEdad(personaModel.getEdad());
-		persona.setGay(personaModel.isGay());
 		return persona;
 	}
 	
@@ -23,7 +22,6 @@ public class PersonaMapper {
 		persona.setNombre(personaEntity.getNombre());
 		persona.setApellidos(personaEntity.getApellidos());
 		persona.setEdad(personaEntity.getEdad());
-		persona.setGay(personaEntity.isGay());
 		return persona;
 	}
 }

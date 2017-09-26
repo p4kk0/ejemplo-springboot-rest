@@ -28,9 +28,6 @@ public class Persona {
 	@Column(name = "EDAD")
 	private Integer edad;
 
-	@Column(name = "GAY")
-	private boolean gay;
-
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "persona")
 	private List<Empleo> empleos;
 
@@ -43,13 +40,12 @@ public class Persona {
 		this.idPersona = idPersona;
 	}
 
-	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, boolean gay, List<Empleo> empleos) {
+	public Persona(Integer idPersona, String nombre, String apellidos, Integer edad, List<Empleo> empleos) {
 		super();
 		this.idPersona = idPersona;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-		this.gay = gay;
 		this.empleos = empleos;
 	}
 
@@ -83,14 +79,6 @@ public class Persona {
 
 	public void setEdad(Integer edad) {
 		this.edad = edad;
-	}
-
-	public boolean isGay() {
-		return gay;
-	}
-
-	public void setGay(boolean gay) {
-		this.gay = gay;
 	}
 
 	public List<Empleo> getEmpleos() {
