@@ -74,7 +74,6 @@ public class PersonaController {
 		personaActual.setNombre(persona.getNombre());
 		personaActual.setApellidos(persona.getApellidos());
 		personaActual.setEdad(persona.getEdad());
-		personaActual.setGay(persona.isGay());
 		logger.info("Datos persona actual: {} ", personaActual.toString());
 
 		personaService.actualizarPersona(personaActual);

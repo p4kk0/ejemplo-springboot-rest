@@ -24,20 +24,16 @@ public class Persona {
 	@Column(name = "EDAD")
 	private Integer edad;
 
-	@Column(name = "GAY")
-	private boolean gay;
-
 	public Persona() {
 		super();
 	}
 
-	public Persona(Integer id, String nombre, String apellidos, int edad, boolean gay) {
+	public Persona(Integer id, String nombre, String apellidos, int edad) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-		this.gay = gay;
 	}
 
 	public Integer getId() {
@@ -72,11 +68,4 @@ public class Persona {
 		this.edad = edad;
 	}
 
-	public boolean isGay() {
-		return gay;
-	}
-
-	public void setGay(boolean gay) {
-		this.gay = gay;
-	}
 }
