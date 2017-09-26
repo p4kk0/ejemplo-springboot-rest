@@ -9,19 +9,17 @@ public class Persona {
 	private String nombre;
 	private String apellidos;
 	private Integer edad;
-	private boolean gay;
 
 	public Persona() {
 		super();
 	}
 
-	public Persona(Integer id, String nombre, String apellidos, int edad, boolean gay) {
+	public Persona(Integer id, String nombre, String apellidos, int edad) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-		this.gay = gay;
 	}
 
 	public Integer getId() {
@@ -54,14 +52,6 @@ public class Persona {
 
 	public void setEdad(Integer edad) {
 		this.edad = edad;
-	}
-
-	public boolean isGay() {
-		return gay;
-	}
-
-	public void setGay(boolean gay) {
-		this.gay = gay;
 	}
 
 	@Override
