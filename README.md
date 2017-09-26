@@ -10,8 +10,7 @@ http://localhost:8080/ejemplorest/h2
 {
     "nombre": "nombre de persona",
     "apellidos": "apellidos de persona",
-    "edad": 31,
-    "gay": false
+    "edad": 31
 }
 ```
 *  Editar (Put) *http://localhost:8080/ejemplorest/personas/{idPersona}* ejemplo *http://localhost:8080/ejemplorest/personas/2*
@@ -19,8 +18,7 @@ http://localhost:8080/ejemplorest/h2
 {
     "nombre": "otro nombre de persona",
     "apellidos": "apellidos de persona",
-    "edad": 22,
-    "gay": false
+    "edad": 22
 }
 ```
 *  Consultar todas las personas (Get) *http://localhost:8080/ejemplorest/personas*
@@ -31,7 +29,6 @@ http://localhost:8080/ejemplorest/h2
     "nombre": "p4kk0",
     "apellidos": "Carr",
     "edad": 89,
-    "gay": false,
     "_links": {
         "self": {
             "href": "http://localhost:8080/ejemplorest/personas/1"
